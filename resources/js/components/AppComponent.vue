@@ -1,12 +1,15 @@
 <template>
   <div>
-    <h2>Hola mundo cruel</h2>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
+
+import axios from 'axios'
+
 export default {
-  name: "AppComponent"
+  name: "AppComponent",
 }
 </script>
 
