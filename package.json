@@ -25,6 +25,7 @@
     },
     "dependencies": {
         "mdbvue": "^6.7.3",
-        "vue-router": "^3.4.9"
+        "vue-router": "^3.4.9",
+        "vue-toastification": "^1.7.14"
     }
 }

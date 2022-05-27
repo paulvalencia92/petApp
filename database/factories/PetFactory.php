@@ -21,7 +21,8 @@ $factory->define(Pet::class, function (Faker $faker) {
     return [
         'category_id' => Category::query()->pluck('id')->random(),
         'name' => $faker->name,
-        'photoUrls' => $faker->imageUrl(800, 600),
+//        'photoUrls' => $faker->imageUrl(800, 600),
+        'photoUrls' => "pet_default.png",
         'status' => Arr::random(Pet::availableValues()),
     ];
 });

@@ -5,7 +5,9 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/tests', function (){
-   return  $tags = \App\Models\Tag::query()->get()->random(1,5);
+    $pizza  = "1,2";
+    $porciones = explode(",", $pizza);
+    return $porciones;
 
 });
 

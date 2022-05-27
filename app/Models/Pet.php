@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pet extends Model
 {
+    protected $guarded = [];
+
     public function category()
     {
         return $this->belongsTo(Category::class);
@@ -22,7 +24,7 @@ class Pet extends Model
         return [
             'available',
             'pending',
-            'sond'
+            'sold'
         ];
     }
 }

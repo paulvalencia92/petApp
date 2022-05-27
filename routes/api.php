@@ -1,22 +1,18 @@
 <?php
 
-use App\Http\Controllers\PetController;
+use App\Http\Controllers\{PetController, CategoryController, TagController};
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| is assigned the "api" middleware group. Enjoy building your API!
-|
-*/
 
-Route::get('/pets',[PetController::class,'index']);
+Route::get('/pets', [PetController::class, 'index']);
+Route::get('/pet/findByStatus', [PetController::class, 'findByStatus']);
+Route::get('/pet/{pet}', [PetController::class, 'show']);
+Route::post('/pet', [PetController::class, 'store']);
+Route::put('/pet/{pet}', [PetController::class, 'update']);
+Route::delete('/pet/{pet}', [PetController::class, 'destroy']);
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('/categories', [CategoryController::class, 'index']);
+Route::get('/tags', [TagController::class, 'index']);
+
+

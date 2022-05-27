@@ -1,4 +1,8 @@
 import router from "./src/router";
+import Vue from "vue";
+import Toast from "vue-toastification";
+import "vue-toastification/dist/index.css";
+Vue.use(Toast);
 
 require('./bootstrap');
 
